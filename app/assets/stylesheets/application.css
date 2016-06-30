@@ -15,3 +15,16 @@
  *= require foundation_and_overrides
 
  */
+
+ @font-face {
+  font-family: "Font 1";
+  src: url(font1.woff) format("woff");
+}
+
+ .top-bar {
+   border-bottom: 1px solid rgba(143, 147, 151, .2);
+ }
+
+ .row {
+    max-width: 2000px;
+}
