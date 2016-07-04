@@ -8,4 +8,57 @@
 #header-box {
   height: 58px;
   border-bottom: 1px solid rgba(143, 147, 151, .2);
+  margin-bottom: 20px;
+}
+
+#status-total-test-box {
+  width: 265px;
+  height: 85px;
+  background-color: #578ebe;
+  margin-right: 9px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+#status-total-test-box:hover {
+  background-color: #4B85B6;
+}
+
+#status-failed-test-box {
+  width: 265px;
+  height: 85px;
+  background-color: #c00000;
+  margin-right: 9px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+#status-failed-test-box:hover {
+  background-color: #DE4B4D;
+}
+
+#status-pass-test-box {
+  width: 265px;
+  height: 85px;
+  background-color: #9CBA5F;
+  margin-right: 9px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+#status-pass-test-box:hover {
+  background-color: #3ea7a0;
+}
+
+#status-last-poll-box {
+  width: 265px;
+  height: 85px;
+  background-color: #2D3E4F;
+  margin-right: 9px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+#status-last-poll-box:hover {
+  background-color: #263442;
 }

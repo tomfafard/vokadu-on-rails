@@ -1,0 +1,15 @@
+.status {
+  margin-top: 5px;
+  padding-right: 25px;
+  text-align: right;
+  font-size: 30px;
+  font-family: "Font 1";
+  color: #FFFFFF;
+}
+
+.status-subtext {
+  padding-right: 25px;
+  text-align: right;
+  font-family: "Font 1";
+  color: rgba(255, 255, 255, .8);
+}
