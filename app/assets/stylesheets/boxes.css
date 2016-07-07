@@ -8,14 +8,21 @@
 #header-box {
   height: 58px;
   border-bottom: 1px solid rgba(143, 147, 151, .2);
-  margin-bottom: 20px;
+}
+
+#side-nav-box {
+  width: 225px;
+  min-height: 300px;
+  border: 1px solid rgba(143, 147, 151, .2);
+  border-radius: 6px;
 }
 
 #status-total-test-box {
-  width: 265px;
+  width: 268px;
   height: 85px;
   background-color: #578ebe;
   margin-right: 9px;
+  margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
 }
@@ -25,10 +32,11 @@
 }
 
 #status-failed-test-box {
-  width: 265px;
+  width: 268px;
   height: 85px;
   background-color: #c00000;
   margin-right: 9px;
+  margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
 }
@@ -38,10 +46,11 @@
 }
 
 #status-pass-test-box {
-  width: 265px;
+  width: 268px;
   height: 85px;
   background-color: #9CBA5F;
   margin-right: 9px;
+  margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
 }
@@ -51,14 +60,33 @@
 }
 
 #status-last-poll-box {
-  width: 265px;
+  width: 268px;
   height: 85px;
   background-color: #2D3E4F;
   margin-right: 9px;
+  margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
 }
 
 #status-last-poll-box:hover {
   background-color: #263442;
+}
+
+@media only screen and (max-device-width: 480px) {
+  #status-total-test-box {
+    width: 230px;
+  }
+
+  #status-failed-test-box {
+    width: 230px;
+  }
+
+  #status-pass-test-box {
+    width: 230px;
+  }
+
+  #status-last-poll-box {
+    width: 230px;
+  }
 }

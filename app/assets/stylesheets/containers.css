@@ -1,0 +1,12 @@
+#status-box-container {
+  margin-left: 15px;
+  margin-top: 17px;
+  position: absolute;
+  display: inline-block;
+}
+
+#side-nav-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+}
