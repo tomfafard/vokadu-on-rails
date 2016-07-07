@@ -72,21 +72,3 @@
 #status-last-poll-box:hover {
   background-color: #263442;
 }
-
-@media only screen and (max-device-width: 480px) {
-  #status-total-test-box {
-    width: 230px;
-  }
-
-  #status-failed-test-box {
-    width: 230px;
-  }
-
-  #status-pass-test-box {
-    width: 230px;
-  }
-
-  #status-last-poll-box {
-    width: 230px;
-  }
-}
