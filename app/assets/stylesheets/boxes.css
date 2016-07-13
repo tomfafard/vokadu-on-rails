@@ -21,7 +21,6 @@
   width: 268px;
   height: 85px;
   background-color: #578ebe;
-  margin-right: 9px;
   margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
@@ -35,7 +34,6 @@
   width: 268px;
   height: 85px;
   background-color: #c00000;
-  margin-right: 9px;
   margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
@@ -49,7 +47,6 @@
   width: 268px;
   height: 85px;
   background-color: #9CBA5F;
-  margin-right: 9px;
   margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
@@ -63,7 +60,6 @@
   width: 268px;
   height: 85px;
   background-color: #2D3E4F;
-  margin-right: 9px;
   margin-top: 3px;
   border-radius: 6px;
   display: inline-block;
@@ -71,4 +67,19 @@
 
 #status-last-poll-box:hover {
   background-color: #263442;
+}
+
+
+#first-pass-yield-box {
+  width: 81%;
+  height: 500px;
+  border: 1px solid rgba(143, 147, 151, .2);
+  border-radius: 6px;
+}
+
+#pareto-box {
+  width: 81%;
+  height: 500px;
+  border: 1px solid rgba(143, 147, 151, .2);
+  border-radius: 6px;
 }

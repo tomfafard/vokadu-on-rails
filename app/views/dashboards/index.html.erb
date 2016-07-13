@@ -15,7 +15,9 @@
         </div>
       </div>
       <div id="status-box-container">
-        <ul class="small-block-grid-2 medium-block-grid-4">
+        <ul class="small-block-grid-2 medium-block-grid-4" data-options="block_width:200">
+
+
           <li>
             <a href="#" id="status-total-test-box">
               <div class="status">
@@ -58,8 +60,56 @@
               </div>
             </a>
           </li>
-        </ul>
+        </ul> <!-- End Block Grid -->
+      </div>
+      <div id="graph-container">
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <div id="first-pass-yield-box">
+
+            </div>
+          </div>
+
+          <div class="small-12 medium-6 columns">
+            <div id="pareto-box">
+
+            </div>
+          </div>
+        </div> <!-- GRAPH ROW END -->
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  /* BLOCK TARGET WIDTH FUNCTION - include the below into your javascript */
+  ;(function ($, window, document, undefined) {
+    'use strict';
+
+    var blocks;
+    var w;
+
+    // Update the block-grid
+    $.fn.updateBlockGrid = function(width) {
+      w = (width === undefined) ? w : width;
+      var l = $(this).find("li").length;
+      if(blocks != null) $(this).removeClass('small-block-grid-' + blocks);
+      blocks = Math.min(l, 12, Math.max(1, Math.round($(this).innerWidth()/(w))));
+      $(this).addClass('small-block-grid-' + blocks);
+    }
+
+    // Read data-options, and set block grid based on target width
+    var el = Foundation.utils.S("ul[data-options*='block_width']");
+    if(el.length) {
+      var s = Foundation.utils.data_options(el).block_width;
+      if(s !== undefined){
+        var w = (s.length === 0) ? 300 : parseInt(s);
+        $(window).on('resize.block-grid', Foundation.utils.debounce(function(e){
+          el.updateBlockGrid(w);
+       }, 200, false));
+        el.updateBlockGrid(w);
+      }
+    }
+
+   }(jQuery, this, this.document));
+</script>

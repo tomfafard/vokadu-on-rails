@@ -12,4 +12,6 @@
   text-align: right;
   font-family: "Font 1";
   color: rgba(255, 255, 255, .8);
+  position: relative;
+  bottom: 7px;
 }
