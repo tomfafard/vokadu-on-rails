@@ -16,8 +16,6 @@
       </div>
       <div id="status-box-container">
         <ul class="small-block-grid-2 medium-block-grid-4" data-options="block_width:200">
-
-
           <li>
             <a href="#" id="status-total-test-box">
               <div class="status">
@@ -65,14 +63,20 @@
         <div id="graph-container">
           <div class="row">
             <div class="small-12 medium-6 small-centered medium-uncentered columns">
-              <div id="first-pass-yield-box">
+              <div id="fpy-box">
+                <div id="fpy-graph-container"></div>
+                <div id="fpy-footer">
 
+                </div>
               </div>
             </div>
 
             <div class="small-12 medium-6 small-centered medium-uncentered columns">
               <div id="pareto-box">
+                <div id="pareto-graph-container"></div>
+                <div id="pareto-footer">
 
+                </div>
               </div>
             </div>
           </div> <!-- GRAPH ROW END -->
@@ -82,6 +86,140 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    var gaugeOptions = {
+
+        chart: {
+            type: 'gauge',
+            plotBackgroundColor: '#FFFFFF',
+            backgroundColor: '#FFFFFF',
+            marginTop: 0,
+            marginBottom: 0,
+            marginLeft: 10,
+            marginRight: 10,
+            spacing: [0,0,0,0],
+            plotShadow: false
+        },
+
+        title: null,
+
+        pane: {
+            center: ['50%', '57%'],
+            size: '100%',
+            startAngle: -90,
+            endAngle: 90,
+            background: {
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                innerRadius: '60%',
+                outerRadius: '100%',
+                shape: 'arc'
+            }
+        },
+
+        tooltip: {
+            enabled: false
+        },
+
+        // the value axis
+        yAxis: {
+            lineWidth: 0,
+            minorTickInterval: 5,
+            tickPixelInterval: 400,
+            tickWidth: 0,
+            tickLength: 1,
+            title: {
+                y: -70
+            },
+            labels: {
+                y: 16
+            }
+        },
+
+        plotOptions: {
+            gauge: {
+                dataLabels: {
+                    y: 5,
+                    borderWidth: 0,
+                    useHTML: true
+                },
+                threshold: 50,
+                negativeColor: '#ff0033'
+            }
+        }
+    };
+
+    // FPY gauge
+    $('#fpy-graph-container').highcharts(Highcharts.merge(gaugeOptions, {
+        yAxis: {
+            min: 0,
+            max: 100,
+            stops: [
+                [50, '#55BF3B'], // green
+                [80, '#DDDF0D'], // yellow
+                [100, '#DF5353'] // red
+            ],
+            tickPositions: [80, 90],
+            labels: {
+              enabled: true,
+              x: 37,
+              y: -13
+            },
+            title: {
+                text: null
+            }
+        },
+
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            name: 'Speed',
+            data: [79],
+            dataLabels: {
+                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
+                       '<span style="font-size:12px;color:silver">FPY</span></div>'
+            },
+            tooltip: {
+                valueSuffix: 'FPY'
+            }
+        }]
+
+    }));
+
+    // Bring life to the dials
+    setTimeout(function () {
+        // Speed
+        var chart = $('#fpy-graph-container').highcharts(),
+            point,
+            newVal,
+            inc;
+
+        if (chart) {
+            point = chart.series[0].points[0];
+            inc = Math.round((Math.random() - 0.5) * 100);
+            newVal = point.y + inc;
+
+            if (newVal < 0 || newVal > 100) {
+                newVal = point.y - inc;
+            }
+
+            point.update(newVal);
+        }
+    }, 2000);
+  });
+</script> <!-- first pass yield chart -->
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+
+  });
+</script> <!-- pareto chart -->
+
+
 
 <script type="text/javascript">
   /* BLOCK TARGET WIDTH FUNCTION - include the below into your javascript */
@@ -114,4 +252,4 @@
     }
 
    }(jQuery, this, this.document));
-</script>
+</script> <!-- block width script -->
