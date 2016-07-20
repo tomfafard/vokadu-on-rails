@@ -5,12 +5,6 @@
   display: inline-block;
 }
 
-@media only screen and (max-device-width: 480px) {
-  #status-box-container {
-    display: none;
-  }
-}
-
 #side-nav-container {
   margin-top: 20px;
   margin-left: 20px;
