@@ -18,7 +18,7 @@
 
  @font-face {
   font-family: "Font 1";
-  src: url(font1.woff) format("woff");
+  src: font-url(font1.woff) format("woff");
 }
 
  .top-bar {
