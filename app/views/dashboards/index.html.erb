@@ -1,91 +1,131 @@
-<div class="row">
-  <div class="small-12 medium-12 columns">
-    <div id="main-content-box">
-      <div id="header-box">
-        <h4 id="global-header">Global</h4>
-      </div>
-      <div id="side-nav-container">
-        <div class="text-center hide-for-small-only" id="side-nav-box">
-          <ul class="side-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Global Dashboard</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">User Profile</a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="status-box-container">
-        <ul class="small-block-grid-2 medium-block-grid-4" data-options="block_width:200">
-          <li>
-            <a href="#" id="status-total-test-box">
-              <div class="status">
-                34,683
-              </div>
-              <div class="status-subtext">
-                Total Test
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" id="status-failed-test-box">
-              <div class="status">
-                7,028
-              </div>
-              <div class="status-subtext">
-                Failed Test
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" id="status-pass-test-box">
-              <div class="status">
-                27,653
-              </div>
-              <div class="status-subtext">
-                Pass Test
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" id="status-last-poll-box">
-              <div class="status">
-                18:25:52
-              </div>
-              <div class="status-subtext">
-                Last Poll
-              </div>
-            </a>
-          </li>
-        </ul> <!-- End Block Grid -->
-
-        <div id="graph-container">
-          <div class="row">
-            <div class="small-12 medium-6 small-centered medium-uncentered columns">
-              <div id="fpy-box">
-                <div id="fpy-graph-container"></div>
-                <div id="fpy-footer">
-
-                </div>
-              </div>
-            </div>
-
-            <div class="small-12 medium-6 small-centered medium-uncentered columns">
-              <div id="pareto-box">
-                <div id="pareto-graph-container"></div>
-                <div id="pareto-footer">
-
-                </div>
-              </div>
-            </div>
-          </div> <!-- GRAPH ROW END -->
-        </div> <!-- GRAPH CONTAINER END -->
-      </div> <!-- STATUS CONTAINER END -->
-
-    </div>
+<div id="header-box">
+  <h4 id="global-header">Global</h4>
+</div>
+<div id="side-nav-container">
+  <div class="text-center hide-for-small-only" id="side-nav-box">
+    <ul class="side-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Global Dashboard</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">User Profile</a></li>
+    </ul>
   </div>
 </div>
+<div id="status-box-container">
+  <ul class="small-block-grid-2 medium-block-grid-4" data-options="block_width:200">
+    <li>
+      <a href="#" id="status-total-test-box">
+        <div class="status">
+          34,683
+        </div>
+        <div class="status-subtext">
+          Total Test
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#" id="status-failed-test-box">
+        <div class="status">
+          7,028
+        </div>
+        <div class="status-subtext">
+          Failed Test
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" id="status-pass-test-box">
+        <div class="status">
+          27,653
+        </div>
+        <div class="status-subtext">
+          Pass Test
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" id="status-last-poll-box">
+        <div class="status">
+          18:25:52
+        </div>
+        <div class="status-subtext">
+          Last Poll
+        </div>
+      </a>
+    </li>
+  </ul> <!-- End Block Grid -->
+
+  <div id="graph-container">
+    <div class="row">
+      <div class="small-12 medium-6 small-centered medium-uncentered columns">
+        <div id="fpy-box">
+          <div id="fpy-graph-container"></div>
+          <div id="fpy-footer">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="small-12 medium-6 small-centered medium-uncentered columns">
+        <div id="pareto-box">
+          <div id="pareto-graph-container"></div>
+          <div id="pareto-footer">
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- GRAPH ROW END -->
+  </div> <!-- GRAPH CONTAINER END -->
+
+  <div id="revenue-container">
+    <div class="row">
+      <div class="small-12 medium-6 small-centered medium-uncentered columns">
+        <div id="revenue-box-1">
+          <div class="status">
+            2,5M
+          </div>
+          <div class="status-subtext">
+            Total Loss
+          </div>
+          <a href="#">
+            <div id="revenue-subbox-1">
+              <span class="subbox-subtext">View More →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="small-12 medium-6 small-centered medium-uncentered columns">
+        <div id="revenue-box-2">
+          <div class="status">
+            2,5M
+          </div>
+          <div class="status-subtext">
+            Total Loss
+          </div>
+          <a href="#">
+            <div id="revenue-subbox-2">
+              <span class="subbox-subtext">View More →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div><!-- REVENUE CONTAINER END -->
+</div> <!-- STATUS CONTAINER END -->
+
+<script type="text/javascript">
+  function windowHW() {
+   var wH = $(window).height();
+   var wW = $(window).width();
+
+  //  $('').css({height: wH});
+   $('.status-total-test-box', 'status-failed-test-box', 'status-pass-test-box', 'status-last-poll-box').css({height: wW});
+  }
+
+  windowHW();
+</script>
 
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function () {
@@ -214,8 +254,64 @@
 </script> <!-- first pass yield chart -->
 
 <script type="text/javascript">
+  var chart;
   document.addEventListener("DOMContentLoaded", function () {
-
+    chart = new Highcharts.Chart({
+        chart: {
+            renderTo: $('#pareto-graph-container')[0],
+            backgroundColor: '#FFFFFF',
+            plotShadow: false
+        },
+        credits: {
+            enabled: false
+        },
+        legend: {
+            layout: 'horizontal',
+            verticalAlign: 'bottom'
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            formatter: function () {
+                if (this.series.name == 'Accumulated') {
+                    return this.y + '%';
+                }
+                return this.x + '<br/>' + '<b> ' + this.y.toString().replace('.', ',') + ' </b>';
+            }
+        },
+        xAxis: {
+            categories: ['Paxton-Phoenix', 'Rutland-Dallas', 'Princeton-Burlington']
+        },
+        yAxis: [{
+            title: {
+                text: ''
+            }
+        }, {
+            labels: {
+                formatter: function () {
+                    return this.value + '%';
+                }
+            },
+            max: 100,
+            min: 0,
+            opposite: true,
+            title: {
+                text: ''
+            }
+        }],
+        series: [{
+            data: [4090, 1883, 1055],
+            name: 'Item',
+            type: 'column'
+        }, {
+            data: [59, 27, 16],
+            name: 'Accumulated',
+            type: 'spline',
+            yAxis: 1,
+            id: 'accumulated'
+        }]
+    });
   });
 </script> <!-- pareto chart -->
 

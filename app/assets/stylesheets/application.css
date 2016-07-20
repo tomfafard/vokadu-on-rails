@@ -28,3 +28,17 @@
  .row {
     max-width: 2000px;
 }
+
+.noverflow {
+  overflow: scroll;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+    }
+
+html, body {
+  height: 100%;
+  overflow: scroll;
+}
