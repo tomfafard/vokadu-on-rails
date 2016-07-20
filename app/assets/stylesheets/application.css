@@ -16,11 +16,6 @@
 
  */
 
- @font-face {
-  font-family: "Font 1";
-  src: asset-url(font1.woff) format("woff");
-}
-
  .top-bar {
    border-bottom: 1px solid rgba(143, 147, 151, .2);
  }
@@ -29,8 +24,8 @@
     max-width: 2000px;
 }
 
-.noverflow {
-  overflow: scroll;
+.side-nav {
+  font-family: 'Hind', sans-serif;
 }
 
 * {

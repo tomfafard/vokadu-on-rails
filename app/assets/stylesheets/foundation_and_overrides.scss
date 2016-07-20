@@ -210,7 +210,7 @@ $body-bg: #FFFFFF;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: 'Hind', sans-serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
@@ -247,7 +247,7 @@ $body-bg: #FFFFFF;
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
+$paragraph-font-family: 'Hind', sans-serif;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
@@ -280,7 +280,7 @@ $body-bg: #FFFFFF;
 // $hr-margin: rem-calc(20);
 
 // We use these to style lists
-// $list-font-family: $paragraph-font-family;
+$list-font-family: 'Hind', sans-serif;
 // $list-font-size: $paragraph-font-size;
 // $list-line-height: $paragraph-line-height;
 // $list-margin-bottom: $paragraph-margin-bottom;
