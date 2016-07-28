@@ -13,6 +13,7 @@ gem 'foundation-rails', "5.5.3.2"
 gem 'simple_form'
 gem 'devise'
 gem 'highcharts-rails'
+gem 'font-awesome-rails'
 gem 'coveralls', require: false
 
 group :development, :test do
