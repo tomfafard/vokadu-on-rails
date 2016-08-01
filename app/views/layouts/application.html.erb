@@ -11,30 +11,59 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <nav class="top-bar" data-topbar role="navigation">
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="/"><%= image_tag "logo.gif", size: "115x25" %></a></h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-      </ul>
+    <div class="row">
+      <div class="medium-2 columns">
+        <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="/"><%= image_tag "logo.gif", size: "115x25" %></a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
 
-      <section class="top-bar-section">
-        <ul class="right">
-          <% if user_signed_in? %>
-            <li class="text-center" id="sign-out-btn"><strong><%= link_to 'Sign Out', destroy_user_session_path, class: :button, method: :delete %></strong></li>
-            <li class="text-center" id="edit-info-btn"><strong><%= link_to 'Edit Info', edit_user_registration_path, class: :button %></strong></li>
-          <% else %>
-            <li class="text-center" id="sign-in-btn"><strong><%= link_to 'Sign In', new_user_session_path, class: :button %></strong></li>
-            <li class="text-center" id="sign-up-btn"><strong><%= link_to 'Sign Up', new_user_registration_path, class: :button %></strong></li>
-          <% end %>
-        </ul>
-      </nav>
+          <section class="top-bar-section">
+              <ul class="right">
+                <li>
+                  <a href="#" class="">Home</a>
+                </li>
+                <li>
+                  <a href="/" class="">Global Dashboard</a>
+                </li>
+                <li class="has-dropdown not-click">
+                  <a href="#" class="">Site Map</a>
+                  <ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
+                    <li><a href="#">Paxton-Phoenix</a></li>
+                    <li><a href="#">Rutland-Dallas</a></li>
+                    <li><a href="#">Princeton-Burlington</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="">Search</a>
+                </li>
+                <li>
+                  <a href="#" class="">User Profile</a>
+                </li>
+            </ul>
+            <div class="text-center" id="copyright">
+              2016 © Vokadu Systems.
+            </div>
+            </section>
+          </nav>
+      </div>
 
-    <%= yield %>
+
+
+      <div class="medium-10 columns">
+        <div class="content">
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
 
   </body>
 </html>
