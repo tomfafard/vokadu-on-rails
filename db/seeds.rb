@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Region.create(region_name: 'paxton-phoenix')
+Region.create(region_name: 'rutland-dallas')
+Region.create(region_name: 'princeton-burlington')
